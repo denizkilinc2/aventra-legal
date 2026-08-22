@@ -14,7 +14,7 @@
   h1{font-size:28px;line-height:1.25}
   .updated{font-size:14px;opacity:.8;margin-top:8px}
   h2{font-size:19px;color:#2D6A5F;margin:32px 0 10px}
-  h3{font-size:16px;margin:20px 0 6px}
+  h3{font-size:16px;margin:20px 0 8px}
   p,li{font-size:15px;color:#3A3A3A}
   ul{margin:8px 0 8px 22px}
   li{margin-bottom:6px}
@@ -22,7 +22,7 @@
   th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #E5DFD0;vertical-align:top}
   th{background:#EFEAE0;font-weight:600}
   .box{background:#fff;border-radius:14px;padding:18px 20px;margin:18px 0;
-       border-left:3px solid #2D6A5F}
+       border-left:3px solid #C9A24B}
   a{color:#2D6A5F}
   footer{text-align:center;font-size:13px;color:#8A8272;padding-top:36px}
   .lang{text-align:right;font-size:13px;padding-top:12px}
@@ -33,7 +33,7 @@
   <div class="wrap">
     <div class="brand">✨ Aventra</div>
     <h1>Privacy Policy</h1>
-    <div class="updated">Last updated: 14 August 2026</div>
+    <div class="updated">Last updated: 22 August 2026</div>
   </div>
 </header>
 
@@ -73,13 +73,19 @@
     <tr><td>Favourites</td><td>To remember the places you saved</td></tr>
     <tr><td>Location (approximate or precise, depending on the permission you grant)</td><td>To suggest nearby places — only with your permission, only while the app is open, and not stored on our servers</td></tr>
     <tr><td>Usage counters</td><td>To apply plan limits</td></tr>
+    <tr><td>Comments you write on shared plans</td><td>To display the comment; your name and profile photo appear next to it</td></tr>
   </table>
 
-  <h3>If you start a free trial</h3>
+  <h3>Device identifier</h3>
   <p>
-    We store your phone number as a <strong>cryptographic hash</strong>. The raw number is
-    never kept in our database. Its only purpose is to make sure the free trial is used
-    once per person. We never use your number for marketing and never share it.
+    To prevent free plan allowances from being reset by creating new accounts, we store
+    a technical identifier for your device as an <strong>irreversible cryptographic
+    hash (HMAC)</strong>. The raw identifier is never kept in our database and cannot
+    be recovered from the hash.
+  </p>
+  <p>
+    This is used <strong>solely for abuse prevention</strong>. It is not linked to your
+    identity, not used for advertising or profiling, and never shared.
   </p>
 
   <h3>Technical data collected automatically</h3>
@@ -98,17 +104,26 @@
     <tr><td>Google (Gemini)</td><td>Generating trip plans, packing lists and journal stories</td><td>The text of your request. Your account details are not sent.</td></tr>
     <tr><td>Google (Places &amp; Maps)</td><td>Place information and map images</td><td>A place name or coordinates. Your identity is not sent.</td></tr>
     <tr><td>Open-Meteo</td><td>Weather</td><td>Coordinates only</td></tr>
-    <tr><td>SMS provider</td><td>Delivering verification codes</td><td>Your phone number and the code</td></tr>
-    <tr><td>Email provider</td><td>Password reset</td><td>Your email address and the code</td></tr>
-    <tr><td>Apple / Google</td><td>In-app purchases</td><td>Payments are handled by the store; your card details never reach us</td></tr>
+    <tr><td>Email provider</td><td>Password reset and notifications</td><td>Your email address and the code</td></tr>
+    <tr><td>Apple / Google</td><td>In-app purchases and subscription status</td><td>Payments are handled by the store; your card details never reach us</td></tr>
   </table>
 
-  <h2>4. Share links</h2>
+  <h2>4. Share links and comments</h2>
   <p>
     When you share a trip plan or a journal entry, a public link to that content is created.
     <strong>Anyone with the link can view that content.</strong>
     You can turn sharing off from inside the app at any time, and the link stops working.
     The shared page shows only that content — your profile, email and other records are not visible.
+  </p>
+  <p>
+    If you comment on a shared plan, <strong>your name and profile photo</strong> become
+    publicly visible next to that comment. You can delete your comment at any time.
+  </p>
+  <p>
+    When you report an inappropriate comment, we record which comment you reported, the
+    reason and your identity for moderation purposes. This record is used only for review;
+    the reported user is not shown who reported them. See the community guidelines section
+    in the <a href="terms-en.html">Terms of Use</a> for details.
   </p>
 
   <h2>5. Where data is stored and for how long</h2>
@@ -116,7 +131,8 @@
     <li>Data is stored on servers within the European Union.</li>
     <li>Your data is kept for as long as your account exists.</li>
     <li>Analytics events are deleted automatically after 90 days.</li>
-    <li>Unused verification codes are deleted after 7 days.</li>
+    <li>Unused password reset codes are deleted after 7 days.</li>
+    <li>Comments are kept for as long as the shared plan they belong to remains shared.</li>
     <li>When you delete your account, your data is deleted <strong>immediately and permanently</strong>.</li>
   </ul>
 
@@ -125,13 +141,13 @@
     <p>
       In the app, go to <strong>Profile → Danger zone → Delete account</strong>.
       Once you enter your password and confirm, your account, journal entries, trips,
-      favourites, all uploaded photos and any active plan are permanently deleted.
-      This cannot be undone, and you don't need to request it from us.
+      favourites, comments you wrote, all uploaded photos and any active plan are
+      permanently deleted. This cannot be undone, and you don't need to request it from us.
     </p>
     <p style="margin-top:10px">
-      One exception: the hash of your phone number is retained to prevent the free trial
-      from being claimed again. The original number cannot be recovered from this hash,
-      and it is used for no other purpose.
+      One exception: the hash of your device identifier is retained to prevent abuse of
+      free allowances. The device cannot be identified from this hash, and it is used for
+      no other purpose.
     </p>
   </div>
 
@@ -163,7 +179,7 @@
   <ul>
     <li>All connections are encrypted with HTTPS.</li>
     <li>Passwords are hashed with bcrypt and never stored in plain text.</li>
-    <li>Phone numbers are stored only as cryptographic hashes.</li>
+    <li>Device identifiers are stored only as irreversible hashes.</li>
     <li>We never see payment details — payments are processed by Apple and Google.</li>
   </ul>
   <p>
