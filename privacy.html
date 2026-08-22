@@ -14,7 +14,7 @@
   h1{font-size:28px;line-height:1.25}
   .updated{font-size:14px;opacity:.8;margin-top:8px}
   h2{font-size:19px;color:#2D6A5F;margin:32px 0 10px}
-  h3{font-size:16px;margin:20px 0 6px}
+  h3{font-size:16px;margin:20px 0 8px}
   p,li{font-size:15px;color:#3A3A3A}
   ul{margin:8px 0 8px 22px}
   li{margin-bottom:6px}
@@ -22,7 +22,7 @@
   th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #E5DFD0;vertical-align:top}
   th{background:#EFEAE0;font-weight:600}
   .box{background:#fff;border-radius:14px;padding:18px 20px;margin:18px 0;
-       border-left:3px solid #2D6A5F}
+       border-left:3px solid #C9A24B}
   a{color:#2D6A5F}
   footer{text-align:center;font-size:13px;color:#8A8272;padding-top:36px}
   .lang{text-align:right;font-size:13px;padding-top:12px}
@@ -33,7 +33,7 @@
   <div class="wrap">
     <div class="brand">✨ Aventra</div>
     <h1>Gizlilik Politikası</h1>
-    <div class="updated">Son güncelleme: 14 Ağustos 2026</div>
+    <div class="updated">Son güncelleme: 22 Ağustos 2026</div>
   </div>
 </header>
 
@@ -73,14 +73,19 @@
     <tr><td>Favorilerin</td><td>Kaydettiğin yerleri hatırlamak</td></tr>
     <tr><td>Konum (verdiğin izne göre yaklaşık veya hassas)</td><td>Yakındaki yerleri önermek — yalnızca izin verirsen, yalnızca uygulama açıkken; sunucularımızda saklanmaz</td></tr>
     <tr><td>Kullanım sayaçları</td><td>Plan limitlerini uygulamak</td></tr>
+    <tr><td>Paylaşılan planlara yazdığın yorumlar</td><td>Yorumu göstermek; adın ve profil fotoğrafın yorumun yanında görünür</td></tr>
   </table>
 
-  <h3>Ücretsiz deneme başlatırsan</h3>
+  <h3>Cihaz tanımlayıcısı</h3>
   <p>
-    Telefon numaranı <strong>şifrelenmiş özet (hash) hâlinde</strong> saklarız.
-    Ham numara veritabanımızda tutulmaz. Bunun tek amacı ücretsiz denemenin
-    kişi başına bir kez kullanılmasını sağlamaktır. Numaranı hiçbir pazarlama
-    amacıyla kullanmayız ve kimseyle paylaşmayız.
+    Ücretsiz plan haklarının yeni hesap açılarak sıfırlanmasını önlemek için
+    cihazına ait teknik bir tanımlayıcıyı <strong>geri döndürülemez biçimde
+    şifreleyerek (HMAC özeti)</strong> saklarız. Ham tanımlayıcı veritabanımızda
+    tutulmaz ve özetten geri elde edilemez.
+  </p>
+  <p>
+    Bu bilgi <strong>yalnızca kötüye kullanım önleme</strong> amacıyla kullanılır;
+    kimliğinle, reklamla veya profillemeyle ilişkilendirilmez, kimseyle paylaşılmaz.
   </p>
 
   <h3>Otomatik toplanan teknik veriler</h3>
@@ -99,17 +104,26 @@
     <tr><td>Google (Gemini)</td><td>Gezi planı, bavul listesi ve anı hikâyesi üretimi</td><td>Yazdığın istek metni. Hesap bilgin gönderilmez.</td></tr>
     <tr><td>Google (Places &amp; Maps)</td><td>Yer bilgisi ve harita görselleri</td><td>Yer adı veya koordinat. Kimliğin gönderilmez.</td></tr>
     <tr><td>Open-Meteo</td><td>Hava durumu</td><td>Yalnızca koordinat</td></tr>
-    <tr><td>SMS sağlayıcısı</td><td>Doğrulama kodu iletmek</td><td>Telefon numaran ve kod</td></tr>
-    <tr><td>E-posta sağlayıcısı</td><td>Şifre sıfırlama</td><td>E-posta adresin ve kod</td></tr>
-    <tr><td>Apple / Google</td><td>Uygulama içi satın almalar</td><td>Ödemeyi mağaza işler; kart bilgin bize hiç ulaşmaz</td></tr>
+    <tr><td>E-posta sağlayıcısı</td><td>Şifre sıfırlama ve bilgilendirme</td><td>E-posta adresin ve kod</td></tr>
+    <tr><td>Apple / Google</td><td>Uygulama içi satın almalar ve abonelik durumu</td><td>Ödemeyi mağaza işler; kart bilgin bize hiç ulaşmaz</td></tr>
   </table>
 
-  <h2>4. Paylaşım bağlantıları</h2>
+  <h2>4. Paylaşım bağlantıları ve yorumlar</h2>
   <p>
     Bir gezi planını veya anı defterini paylaştığında, o içeriğe erişilebilen
     genel bir bağlantı oluşturulur. <strong>Bağlantıya sahip herkes o içeriği görebilir.</strong>
     Paylaşımı uygulama içinden istediğin zaman kapatabilirsin; kapattığında bağlantı çalışmaz olur.
     Paylaşılan sayfa yalnızca o içeriği gösterir — profilin, e-postan veya diğer kayıtların görünmez.
+  </p>
+  <p>
+    Paylaşılan bir plana yorum yazarsan, <strong>adın ve profil fotoğrafın</strong> o yorumun
+    yanında herkese görünür olur. Yorumunu istediğin zaman silebilirsin.
+  </p>
+  <p>
+    Uygunsuz bir yorumu bildirdiğinde; hangi yorumu, hangi sebeple bildirdiğini ve
+    kimliğini moderasyon amacıyla kaydederiz. Bu kayıt yalnızca incelemede kullanılır,
+    bildirdiğin kişiye kim olduğun gösterilmez. Ayrıntı için
+    <a href="terms.html">Kullanım Koşulları</a> içindeki topluluk kuralları bölümü.
   </p>
 
   <h2>5. Verilerin nerede ve ne kadar saklanıyor</h2>
@@ -117,7 +131,8 @@
     <li>Veriler Avrupa Birliği içindeki sunucularda saklanır.</li>
     <li>Hesabın açık kaldığı sürece verilerin saklanır.</li>
     <li>Analiz olayları 90 gün sonra otomatik silinir.</li>
-    <li>Kullanılmayan doğrulama kodları 7 gün sonra silinir.</li>
+    <li>Kullanılmayan şifre sıfırlama kodları 7 gün sonra silinir.</li>
+    <li>Yorumlar, yazdığın plan paylaşımı açık kaldığı sürece saklanır.</li>
     <li>Hesabını sildiğinde verilerin <strong>hemen ve kalıcı olarak</strong> silinir.</li>
   </ul>
 
@@ -126,13 +141,13 @@
     <p>
       Uygulamada <strong>Profil → Tehlikeli bölge → Hesabı sil</strong> yolunu izle.
       Şifreni girip onayladığında hesabın, anı defterlerin, gezilerin, favorilerin,
-      yüklediğin tüm fotoğraflar ve varsa aktif planın kalıcı olarak silinir.
-      Bu işlem geri alınamaz ve bizden talep etmene gerek yoktur.
+      yazdığın yorumlar, yüklediğin tüm fotoğraflar ve varsa aktif planın kalıcı
+      olarak silinir. Bu işlem geri alınamaz ve bizden talep etmene gerek yoktur.
     </p>
     <p style="margin-top:10px">
-      Tek istisna: ücretsiz denemenin tekrar kullanılmasını önlemek için telefon
-      numaranın şifrelenmiş özeti saklanmaya devam eder. Bu özetten numaraya
-      geri dönülemez ve başka hiçbir amaçla kullanılmaz.
+      Tek istisna: ücretsiz hakların kötüye kullanılmasını önlemek için cihaz
+      tanımlayıcısının şifrelenmiş özeti saklanmaya devam eder. Bu özetten
+      cihaza geri dönülemez ve başka hiçbir amaçla kullanılmaz.
     </p>
   </div>
 
@@ -164,7 +179,7 @@
   <ul>
     <li>Tüm bağlantılar HTTPS ile şifrelenir.</li>
     <li>Şifreler bcrypt ile özetlenerek saklanır, düz metin tutulmaz.</li>
-    <li>Telefon numaraları yalnızca şifrelenmiş özet hâlinde saklanır.</li>
+    <li>Cihaz tanımlayıcıları yalnızca geri döndürülemez özet hâlinde saklanır.</li>
     <li>Ödeme bilgilerini hiç görmeyiz — ödemeler Apple ve Google tarafından işlenir.</li>
   </ul>
   <p>
